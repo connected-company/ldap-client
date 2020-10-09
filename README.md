@@ -22,6 +22,12 @@ Vous avez 2 possibilité:
     
     - Etendre le LdapClient, ce qui vous permet ensuite d'ajouter des méthodes si besoin
     
+Dans tout les cas il faut passer en param un DSN, un user et un password au LdapClient (il est possible de changer le port et de DC aussi)
+
+```PHP
+$client = new Connected\LdapClient\Service\LdapClient("ldaps://ldap.demo.intra:636", "username", "password");
+```
+
 ## Méthodes
 
 ### getLink(): resource
