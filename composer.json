@@ -6,5 +6,8 @@
     "psr-4": {
       "Connected\\LdapClient\\": "src/"
     }
+  },
+  "require": {
+      "php": ">=7.0"
+    }
   }
-}
