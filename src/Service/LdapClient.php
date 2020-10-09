@@ -89,7 +89,9 @@ class LdapClient implements LdapClientInterface
             $entries = @ldap_get_entries($ds, $result);
 
             foreach ($entries as $e) {
-                $results[] = $e;
+                if (is_array($e)) {
+                    $results[] = $e;
+                }
             }
 
             /**

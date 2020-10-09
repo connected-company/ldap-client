@@ -18,6 +18,6 @@ class LdapClientException extends Exception
      */
     public function __construct($message, $link, $code = 0, Throwable $previous = null)
     {
-        parent::__construct($message . "(last ldap_error: ".ldap_error($link)."", $code, $previous);
+        parent::__construct($message . " (last ldap_error: ".ldap_error($link).")", $code, $previous);
     }
 }
