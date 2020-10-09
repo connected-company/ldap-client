@@ -60,7 +60,8 @@ Permet de recher un user
 | $dn | Non | Permet de modifier le DN, par exemple pour ajouter OU=users|
 | $attributes | Non | Un tableau d'attributs requis, e.g. array("mail", "sn", "cn"). Notez que le "dn" est toujours retourné, quel que soit le type de l'attribut demandé|
 
-#####Enum **LdapClientSearchUserTypesEnum**
+Enum **LdapClientSearchUserTypesEnum**
+
 | Param  | Description |
 | ------ | ------ |
 | ::FIRSTNAME | Permet de chercher sur le champ prenom | 
