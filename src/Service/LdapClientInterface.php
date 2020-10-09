@@ -91,7 +91,7 @@ interface LdapClientInterface
      *
      * @return array
      */
-    public function getEntriesByEmail(string $email, $dn, $attributes = null): array;
+    public function getEntriesByEmail(string $email, $dn = null, $attributes = null): array;
 
     /**
      * @param string $username
@@ -100,7 +100,7 @@ interface LdapClientInterface
      *
      * @return bool
      */
-    public function checkCredentials(string $username, string $password, $dn): bool;
+    public function checkCredentials(string $username, string $password, $dn = null): bool;
 
     /**
      * @param string        $ldap
@@ -109,7 +109,7 @@ interface LdapClientInterface
      *
      * @return mixed
      */
-    public function getUser(string $ldap, $dn, $attributes = null): array;
+    public function getUser(string $ldap, $dn = null, $attributes = null): array;
 
     /**
      * @param null $dn

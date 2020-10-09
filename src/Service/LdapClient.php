@@ -184,7 +184,7 @@ class LdapClient implements LdapClientInterface
      *
      * @throws LdapClientException
      */
-    public function getEntriesByEmail(string $email, $dn, $attributes = null): array
+    public function getEntriesByEmail(string $email, $dn = null, $attributes = null): array
     {
         return $this->query("(|(mail=" . $email .")(ProxyAddresses=smtp:" . $email . "))", $dn, $attributes);
     }
@@ -194,7 +194,7 @@ class LdapClient implements LdapClientInterface
      *
      * @throws LdapClientException
      */
-    public function getUser(string $ldap, $dn, $attributes = null): array
+    public function getUser(string $ldap, $dn = null, $attributes = null): array
     {
         $query = "(&(objectClass=user)(objectCategory=person)(sAMAccountName=" . $ldap . "))";
 
@@ -212,7 +212,7 @@ class LdapClient implements LdapClientInterface
      *
      * @throws LdapClientException
      */
-    public function checkCredentials(string $username, string $password, $dn): bool
+    public function checkCredentials(string $username, string $password, $dn = null): bool
     {
         $link = @ldap_connect($this->dsn, $this->port);
         if ($link) {
