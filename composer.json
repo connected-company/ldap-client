@@ -1,0 +1,10 @@
+{
+  "name": "connected-company/ldap-client",
+  "type": "library",
+  "description": "LDAP connector that use pagination",
+  "autoload": {
+    "psr-4": {
+      "Connected\\LdapClient\\": "src/"
+    }
+  }
+}
