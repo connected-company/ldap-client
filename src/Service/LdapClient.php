@@ -85,7 +85,7 @@ class LdapClient implements LdapClientInterface
              */
             ldap_control_paged_result($ds, $pageSize, true, $cookie);
 
-            $result  = ldap_search($ds, $this->getDn($dn), $query, $attributes);
+            $result  = ldap_search($ds, $this->getDn($dn), $query, $attributes ?? []);
             $entries = @ldap_get_entries($ds, $result);
 
             foreach ($entries as $e) {
