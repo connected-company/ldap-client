@@ -111,3 +111,10 @@ Permet de verifier les identifiants d'un user
 | $username | Oui | Le username a tester |
 | $password | Oui | Le mot de passe a tester |
 | $dn | Non | Permet de modifier le DN, par exemple pour ajouter OU=users|
+
+## Exceptions
+
+| Nom | Description |
+| ------ | ------ |
+| LdapClientException | Exception de base, arrive si un problème apparait lors de la connexion par exemple | 
+| LdapClientNotFoundException | Quand l'entry demandé n'est pas trouvé, par exemple avec le search user | 
